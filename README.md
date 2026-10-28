@@ -8,6 +8,7 @@ A fresh collection of portable skills for agents, authored in this repository. E
 | --- | --- | --- | --- |
 | [add-skill](misc/add-skill/SKILL.md) | Misc | Establish intent through probing questions, gather requirements, confirm a brief, and author a new skill with a README entry. | "Use add-skill to create a skill for reviewing API designs." |
 | [tdd](engineering/tdd/SKILL.md) | Engineering | Agree test seams, then develop back-end behaviours with strict red-green-refactor, scenario-based tests, and preferred .NET/xUnit conventions. | "Use tdd to add account licence checks before adding a user." |
+| [ddd](engineering/ddd/SKILL.md) | Engineering | Confirm aggregate boundaries and model business behaviour with protected invariants, inward dependencies, and preferred .NET/MongoDB conventions. | "Use ddd to model account licences and user allocation." |
 
 ## Roadmap
 
@@ -19,8 +20,7 @@ These skills are planned; their requirements and briefs will be established befo
 
 ### Engineering
 
-- DDD — discovery in progress.
-- Pull Request
+- Pull Request — discovery in progress.
 - Code Review
 - Add Endpoints
 - Pair Programming
