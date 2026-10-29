@@ -29,6 +29,7 @@ Examine the following in context:
 - Excessive DRY: do not force superficially similar operations together when their meaning or likely evolution differs. Small duplication can be clearer than a premature shared abstraction.
 - Premature optimisation: require an actual workload, constraint or credible cost argument. Do not introduce complexity to address a hypothetical bottleneck.
 - Poor readability: assess whether a colleague can follow the behaviour and decisions without reconstructing intent from incidental details.
+- Heavily nested expressions and ternaries: prefer clearly named intermediate variables that expose the meaning of conditions and computed values. Flag compact expressions that make the reader mentally unpack several decisions; recommend a readable sequence rather than nesting more logic into one line.
 - Oversized changesets: identify unrelated concerns or independently reviewable slices that would make the change easier to assess and integrate.
 
 Offer the simplest useful correction. Avoid replacing one complexity with another or turning a review into an unrelated redesign.
