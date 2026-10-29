@@ -10,6 +10,7 @@ A fresh collection of portable skills for agents, authored in this repository. E
 | [tdd](engineering/tdd/SKILL.md) | Engineering | Agree test seams, then develop back-end behaviours with strict red-green-refactor, scenario-based tests, and preferred .NET/xUnit conventions. | "Use tdd to add account licence checks before adding a user." |
 | [ddd](engineering/ddd/SKILL.md) | Engineering | Confirm aggregate boundaries and model business behaviour with protected invariants, inward dependencies, and preferred .NET/MongoDB conventions. | "Use ddd to model account licences and user allocation." |
 | [pull-request](engineering/pull-request/SKILL.md) | Engineering | Write succinct PR descriptions explaining decisions, pattern departures, new abstractions, blast radius, agreed criteria and validation. | "Use pull-request to create a PR for the completed account licence changes." |
+| [code-review](engineering/code-review/SKILL.md) | Engineering | Review PRs, local changes or codebases for simplicity, correctness, performance, maintainability, security and engineering conventions; present findings before publishing. | "Use code-review to review these changes and highlight new conventions." |
 
 ## Roadmap
 
@@ -21,12 +22,11 @@ These skills are planned; their requirements and briefs will be established befo
 
 ### Engineering
 
-- Code Review — discovery in progress.
-- Add Endpoints
+- Add Endpoints — discovery in progress.
 - Pair Programming
 - Hand Off
 - Bug Fixing
-- Front-End
+- Front-End — React Query for data retrieval and mutations, owned by the components that need them; avoid prop drilling. Use `useEffect` or `useState` only with explicit user permission.
 - Document
 - Feature Map
 - Explain
