@@ -12,6 +12,7 @@ A fresh collection of portable skills for agents, authored in this repository. E
 | [pull-request](engineering/pull-request/SKILL.md) | Engineering | Write succinct PR descriptions explaining decisions, pattern departures, new abstractions, blast radius, agreed criteria and validation. | "Use pull-request to create a PR for the completed account licence changes." |
 | [code-review](engineering/code-review/SKILL.md) | Engineering | Review PRs, local changes or codebases for simplicity, correctness, performance, maintainability, security and engineering conventions; present findings before publishing. | "Use code-review to review these changes and highlight new conventions." |
 | [add-endpoints](engineering/add-endpoints/SKILL.md) | Engineering | Add ASP.NET endpoints through staged TDD: a success-status smoke test, separate domain/storage prerequisites, controller hand-off and mapping, and handler orchestration. | "Use add-endpoints to add an endpoint for allocating an account licence." |
+| [pair-programming](engineering/pair-programming/SKILL.md) | Engineering | Let the agent drive while you steer, using interactive implementation slices, concise reasoning, alternatives and senior engineering judgement. | "Use pair-programming to work through this licence allocation problem with me." |
 
 ## Roadmap
 
@@ -23,8 +24,7 @@ These skills are planned; their requirements and briefs will be established befo
 
 ### Engineering
 
-- Pair Programming — discovery in progress.
-- Hand Off
+- Hand Off — discovery in progress.
 - Bug Fixing
 - Front-End — React Query for data retrieval and mutations, owned by the components that need them; avoid prop drilling. Use `useEffect` or `useState` only with explicit user permission.
 - Document
