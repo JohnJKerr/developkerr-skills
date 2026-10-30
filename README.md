@@ -14,6 +14,7 @@ A fresh collection of portable skills for agents, authored in this repository. E
 | [add-endpoints](engineering/add-endpoints/SKILL.md) | Engineering | Add ASP.NET endpoints through staged TDD: a success-status smoke test, separate domain/storage prerequisites, controller hand-off and mapping, and handler orchestration. | "Use add-endpoints to add an endpoint for allocating an account licence." |
 | [pair-programming](engineering/pair-programming/SKILL.md) | Engineering | Let the agent drive while you steer, using interactive implementation slices, concise reasoning, alternatives and senior engineering judgement. | "Use pair-programming to work through this licence allocation problem with me." |
 | [hand-off](engineering/hand-off/SKILL.md) | Engineering | Prepare a destination-specific inline hand-off, including endpoint contracts and known errors for front-end consumers, for you to send. | "Use hand-off to prepare the completed licence endpoint details for the front-end agent." |
+| [bug-fixing](engineering/bug-fixing/SKILL.md) | Engineering | Form a hypothesis, reproduce the issue in a behaviour test or Storybook story, then fix and verify it; discuss failed reproduction before proceeding. | "Use bug-fixing to investigate why licence allocation fails for this account." |
 
 ## Roadmap
 
@@ -25,8 +26,7 @@ These skills are planned; their requirements and briefs will be established befo
 
 ### Engineering
 
-- Bug Fixing — discovery in progress.
-- Front-End — React Query for data retrieval and mutations, owned by the components that need them; avoid prop drilling. Use `useEffect` or `useState` only with explicit user permission.
+- Front-End — discovery in progress. React Query for data retrieval and mutations, owned by the components that need them; avoid prop drilling. Use `useEffect` or `useState` only with explicit user permission.
 - Document
 - Feature Map
 - Explain
