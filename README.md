@@ -36,6 +36,10 @@ These skills are planned; their requirements and briefs will be established befo
 - Delivery
 - Start Task
 
+### Writing
+
+- Editor
+
 ## Adding a skill
 
 Use `add-skill` to work through the idea in small themed question batches. It challenges assumptions and resolves material gaps before presenting a brief for confirmation. Once confirmed, it authors the skill under `<category>/<skill-name>/SKILL.md` and updates this catalogue.
