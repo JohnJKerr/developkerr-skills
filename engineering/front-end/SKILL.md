@@ -21,7 +21,9 @@ Keep components and control flow readable. Prefer named intermediate variables o
 
 Prefer ordinary or derived variables when persistent reactive state is unnecessary. Derive values from existing inputs or query results rather than copying them into local state and synchronising them.
 
-Obtain explicit user permission before introducing `useState` or `useEffect`. Explain the concrete need and relevant alternatives. Reuse permission already given for the relevant work rather than asking again.
+Prefer form state for user input and interactions that naturally belong to a form. Make the choice between form state and `useState` defensible: explain what owns the state and why the chosen approach fits the interaction. Use the project's established form facilities where available; a preference for form state does not justify forcing unrelated UI state into a form.
+
+Obtain explicit user permission before introducing `useState` or `useEffect`. The check before `useState` exists to ensure form state has been considered and any departure from that preference is justified. Explain the concrete need and relevant alternatives. Reuse permission already given for the relevant work rather than asking again.
 
 An ordinary variable does not substitute for state that must survive renders or update the UI. If an interaction needs that state, discuss the requirement with the user. Do not bypass the permission requirement through a wrapper hook or substitute another mutable mechanism solely to avoid asking.
 
