@@ -50,6 +50,10 @@ Decide dispatch timing, persistence ordering and failure handling for the actual
 
 ## Preferred .NET/MongoDB conventions
 
+### Justify nullable properties
+
+Prefer non-nullable properties. Justify each nullable property by explaining what absence means in the domain or contract and when it is valid. Construction or deserialisation convenience alone is insufficient justification.
+
 ### Dependency direction and ownership
 
 Domain is the innermost project. Application depends on Domain; API, Storage/Database and External adapters look inward to Application/Domain. Domain must not depend on those outer projects.
