@@ -40,6 +40,8 @@ Pure refactors and configuration or wiring changes can rely on existing coverage
 
 ### Name scenarios and outcomes
 
+Before adding a test, search the relevant test project for existing suites and read their scenarios and setup. Add the test to an existing suite when its action, context and test seam fit. Create a new suite only when the behaviour needs a genuinely different scenario or boundary that the existing suites do not express. Separate outcomes within the same scenario belong in separate tests, not automatically in separate suites; BDD naming is not a reason to create a class for every test.
+
 Name suites for the action or context, and tests for the outcome:
 
 ```csharp
