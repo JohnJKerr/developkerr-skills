@@ -16,6 +16,7 @@ A fresh collection of portable skills for agents, authored in this repository. E
 | [hand-off](engineering/hand-off/SKILL.md) | Engineering | Prepare a destination-specific inline hand-off, including endpoint contracts and known errors for front-end consumers, for you to send. | "Use hand-off to prepare the completed licence endpoint details for the front-end agent." |
 | [bug-fixing](engineering/bug-fixing/SKILL.md) | Engineering | Form a hypothesis, reproduce the issue in a behaviour test or Storybook story, then fix and verify it; discuss failed reproduction before proceeding. | "Use bug-fixing to investigate why licence allocation fails for this account." |
 | [front-end](engineering/front-end/SKILL.md) | Engineering | Build self-contained React or Astro components with data access close to the consumer, minimal prop drilling and Storybook stories alongside implementation. | "Use front-end to build the account licence screen and its relevant stories." |
+| [document](writing/document/SKILL.md) | Writing | Create succinct, persistent concept documentation in the project's `/docs` folder that users and agents can understand without reading code. | "Use document to explain account licensing in /docs, with a diagram if useful." |
 
 ## Roadmap
 
@@ -27,7 +28,6 @@ These skills are planned; their requirements and briefs will be established befo
 
 ### Engineering
 
-- Document — discovery in progress.
 - Feature Map
 - Explain
 - Self-Host
