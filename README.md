@@ -17,6 +17,8 @@ A fresh collection of portable skills for agents, authored in this repository. E
 | [bug-fixing](engineering/bug-fixing/SKILL.md) | Engineering | Form a hypothesis, reproduce the issue in a behaviour test or Storybook story, then fix and verify it; discuss failed reproduction before proceeding. | "Use bug-fixing to investigate why licence allocation fails for this account." |
 | [front-end](engineering/front-end/SKILL.md) | Engineering | Build self-contained React or Astro components with data access close to the consumer, minimal prop drilling and Storybook stories alongside implementation. | "Use front-end to build the account licence screen and its relevant stories." |
 | [document](writing/document/SKILL.md) | Writing | Create succinct, persistent concept documentation in the project's `/docs` folder that users and agents can understand without reading code. | "Use document to explain account licensing in /docs, with a diagram if useful." |
+| [feature-map](writing/feature-map/SKILL.md) | Writing | Map proposed or existing features in `/docs`, explaining whole-feature user-facing behaviour and scope without implementation details or delivery planning. | "Use feature-map to document the existing account licensing feature." |
+| [explain](writing/explain/SKILL.md) | Writing | Explain a concept or the agent's approach inline with succinct reasoning, relevant tradeoffs and helpful examples or diagrams. | "Use explain to walk me through why this approach fits the problem." |
 
 ## Roadmap
 
@@ -28,9 +30,7 @@ These skills are planned; their requirements and briefs will be established befo
 
 ### Engineering
 
-- Feature Map
-- Explain
-- Self-Host
+- Self-Host — discovery in progress.
 - Refactor
 - New Project
 - Delivery
