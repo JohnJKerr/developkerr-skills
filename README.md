@@ -19,6 +19,7 @@ A fresh collection of portable skills for agents, authored in this repository. E
 | [document](writing/document/SKILL.md) | Writing | Create succinct, persistent concept documentation in the project's `/docs` folder that users and agents can understand without reading code. | "Use document to explain account licensing in /docs, with a diagram if useful." |
 | [feature-map](writing/feature-map/SKILL.md) | Writing | Map proposed or existing features in `/docs`, explaining whole-feature user-facing behaviour and scope without implementation details or delivery planning. | "Use feature-map to document the existing account licensing feature." |
 | [explain](writing/explain/SKILL.md) | Writing | Explain a concept or the agent's approach inline with succinct reasoning, relevant tradeoffs and helpful examples or diagrams. | "Use explain to walk me through why this approach fits the problem." |
+| [self-host](engineering/self-host/SKILL.md) | Engineering | Prepare repository files for Coolify with Docker packaging, external-service configuration, secret-leakage checks and concise setup notes; no deployment. | "Use self-host to prepare this API for Coolify with MongoDB hosted separately." |
 
 ## Roadmap
 
@@ -30,8 +31,7 @@ These skills are planned; their requirements and briefs will be established befo
 
 ### Engineering
 
-- Self-Host — discovery in progress.
-- Refactor
+- Refactor — discovery in progress.
 - New Project
 - Delivery
 - Start Task
