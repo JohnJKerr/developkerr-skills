@@ -30,6 +30,7 @@ Examine the following in context:
 - Premature optimisation: require an actual workload, constraint or credible cost argument. Do not introduce complexity to address a hypothetical bottleneck.
 - Poor readability: assess whether a colleague can follow the behaviour and decisions without reconstructing intent from incidental details.
 - Heavily nested expressions and ternaries: prefer clearly named intermediate variables that expose the meaning of conditions and computed values. Flag compact expressions that make the reader mentally unpack several decisions; recommend a readable sequence rather than nesting more logic into one line.
+- Nested calls in production and test code, including Arrange steps and helpers: assign awaited results, constructed objects and request bodies to role-named variables before using them. Flag calls chained onto parenthesised `await` expressions and arguments constructed inside another call. Follow existing naming and separate steps in longer sequences with blank lines; see [TDD's .NET conventions](../tdd/SKILL.md#name-intermediate-values-instead-of-nesting-calls).
 - Oversized changesets: identify unrelated concerns or independently reviewable slices that would make the change easier to assess and integrate.
 
 Offer the simplest useful correction. Avoid replacing one complexity with another or turning a review into an unrelated redesign.

@@ -72,6 +72,20 @@ Prefer meaningful domain state over bags of raw property setters. Builders shoul
 
 ## Preferred .NET conventions
 
+### Name intermediate values instead of nesting calls
+
+Apply this to production and test code, including Arrange steps and helpers. Assign the results of `await`, constructors and request bodies to named variables, then act on those variables in the following statement. Do not parenthesise an `await` to chain a call onto its result, or construct arguments inline inside another call.
+
+Name each value for its role, such as `termsBody` and `termsResponse`, following existing naming in the file. Put a blank line between steps in a sequence with several operations. Each line should perform one step so the code reads top to bottom, names explain the values, and diffs and stack traces identify a specific step.
+
+```csharp
+var termsBody = new StringContent(terms, Encoding.UTF8, "application/json");
+
+var termsResponse = await client.PutAsync($"/api/placements/{id}/permanent-terms", termsBody);
+
+termsResponse.EnsureSuccessStatusCode();
+```
+
 ### Tooling and dependencies
 
 Use xUnit for new .NET/ASP.NET test projects. In existing projects, use the established testing tools unless a change is requested; do not migrate frameworks incidentally.
