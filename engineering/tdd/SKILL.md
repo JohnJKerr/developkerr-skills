@@ -7,6 +7,8 @@ description: Apply strict behaviour-driven red-green-refactor when adding or cha
 
 Use short red-green-refactor cycles to implement back-end behaviour through agreed public boundaries. Keep changes small enough to integrate continuously. The general principles can be used on another stack; the .NET conventions capture the preferred implementation approach.
 
+Read [Delivery](../delivery/SKILL.md) for changeset boundaries: separate prerequisite concerns, stop to agree newly expanded scope, and hand back each shippable slice rather than widening it to keep tests green.
+
 ## General principles
 
 ### Agree the seams first

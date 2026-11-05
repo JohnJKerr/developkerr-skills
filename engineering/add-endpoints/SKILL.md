@@ -7,13 +7,15 @@ description: "Add ASP.NET endpoints through a staged test-first workflow: succes
 
 Add an endpoint in small red-green-refactor steps. Establish its route first, then build orchestration on separately tested domain and storage behaviour. Keep the current architecture; adding an endpoint does not itself justify introducing MediatR or new application layers.
 
+Read [Delivery](../delivery/SKILL.md) for changeset boundaries: separate prerequisite concerns, stop to agree newly expanded scope, and hand back each shippable slice rather than absorbing all endpoint prerequisites into one changeset.
+
 ## Agree the contract and seams
 
 Inspect relevant endpoints, controllers, handlers, test projects and authentication policies. Establish the task's intended behaviour and follow existing route, request/response, validation and result-to-HTTP conventions. Resolve consequential choices rather than inventing new API conventions incidentally.
 
 Present the proposed endpoint contract and public test seams to the user. Briefly explain what each seam covers and leaves out. Include the intended success status and the authentication/authorisation requirements, including anonymous access and account/resource ownership where relevant. Wait for confirmation before writing tests. Reuse agreement already provided for the current change.
 
-Once agreed, work through the stages autonomously. Seek further confirmation only when a material contract or seam change is needed. New or changed aggregate boundaries also require the domain sketch confirmation described by the DDD conventions; it can be included in the initial discussion when known.
+Once agreed, work autonomously within the current delivery slice; the stages below can span several slices. Seek further confirmation when the slice expands or a material contract or seam change is needed. New or changed aggregate boundaries also require the domain sketch confirmation described by the DDD conventions; it can be included in the initial discussion when known.
 
 ## Follow the staged workflow
 
@@ -59,6 +61,6 @@ The full back-end conventions are in the `tdd` and `ddd` skills when available. 
 
 ## Finish
 
-Rerun relevant tests after the final implementation, including the original success-status integration test. Check that the endpoint now fulfils the agreed behaviour rather than merely returning a successful status. Keep the changeset focused on that endpoint and its necessary prerequisites.
+Rerun relevant tests after the final implementation, including the original success-status integration test. Check that the endpoint now fulfils the agreed behaviour rather than merely returning a successful status. Keep each changeset within its agreed slice, with distinct prerequisites delivered separately under Delivery's guidance.
 
 Briefly report the endpoint delivered, behaviour covered, checks actually performed and any remaining limitations, including authentication coverage. Do not imply that smoke-test success establishes business correctness.
