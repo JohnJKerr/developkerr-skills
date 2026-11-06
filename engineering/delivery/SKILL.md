@@ -1,6 +1,6 @@
 ---
 name: delivery
-description: Deliver engineering work in small, coherent, tested and shippable changesets with early user review. Separate prerequisite and cross-cutting concerns, prefer smaller slices by layer, and stop to agree a split when scope expands. Applies during implementation alongside TDD, DDD and endpoint workflows.
+description: Deliver coherent, tested and shippable changesets with early user review. Prefer small slices, allowing larger refactors with one focused purpose. Separate prerequisite concerns and stop to agree newly expanded scope. Applies during implementation alongside TDD, DDD and endpoint workflows.
 ---
 
 # Delivery
@@ -12,6 +12,8 @@ Make sound engineering decisions and take the time needed to deliver a coherent,
 Use the agreed task and current code to identify the next focused outcome, what is needed to achieve it, and what remains for later. Keep this discussion brief and practical rather than planning the whole feature in detail. Reuse an agreed slice without asking for approval of routine edits within it.
 
 Prefer breaking work across layers into smaller slices where practical: domain behaviour first, then persistence, API and application orchestration. Necessary work across several layers is a reason to look for smaller boundaries, not automatic justification to include it all in one changeset. Choose boundaries that keep each result coherent and shippable.
+
+Refactors are an exception to the preference for small slices. A refactor aimed at one clear purpose may inevitably require a large changeset across files or layers. Keep the necessary changes together when splitting them would undermine coherence or leave the system in an artificial intermediate state. Judge the boundary by the agreed purpose, not file count or diff size; explain the reach and verify the affected behaviour. This does not permit unrelated cleanup or additional refactoring goals to accumulate in the same slice.
 
 Each slice must leave the system working without relying on unfinished follow-up work. An internal domain or persistence capability can be shippable before a user-facing feature is complete, provided existing behaviour remains sound. Do not call a stub, a fake success response or a partially wired feature shippable merely because its current tests pass.
 
@@ -25,7 +27,7 @@ Each slice must leave the system working without relying on unfinished follow-up
 
 ## Stop when a separate concern emerges
 
-When a prerequisite or expanding blast radius materially changes the slice, stop and hand control back. This includes discovering that a feature requires a model replacement, migration or broader refactor with its own consequences. Do not keep widening the change merely to make affected callers compile or tests pass.
+When a prerequisite or expanding blast radius materially changes the slice's agreed purpose or scope, stop and hand control back. Necessary edits across the reach of an agreed, focused refactor do not by themselves constitute scope expansion. This rule applies when a separate concern emerges, including discovering that a feature requires a model replacement, migration or broader refactor with its own consequences. Do not keep widening the change merely to make affected callers compile or tests pass.
 
 Briefly explain:
 
