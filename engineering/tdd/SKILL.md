@@ -72,6 +72,12 @@ Prefer meaningful domain state over bags of raw property setters. Builders shoul
 
 ## Preferred .NET conventions
 
+### Prefer explicit control flow and method bodies
+
+Apply this to production and test code, including helpers. Prefer named intermediate variables and clear `if` statements or guard clauses over long chains of conditions and ternaries. Keep dependent checks sequential so later operations run only after their prerequisites succeed.
+
+Use block-bodied methods for multi-step logic, validation and branching rather than packing those decisions into an expression-bodied member (`=>`). The same preference applies to complex lambdas: use a block body or extract a named method. Simple single-expression members can remain concise.
+
 ### Name intermediate values instead of nesting calls
 
 Apply this to production and test code, including Arrange steps and helpers. Assign the results of `await`, constructors and request bodies to named variables, then act on those variables in the following statement. Do not parenthesise an `await` to chain a call onto its result, or construct arguments inline inside another call.

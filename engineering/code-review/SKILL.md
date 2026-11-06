@@ -29,7 +29,8 @@ Examine the following in context:
 - Excessive DRY: do not force superficially similar operations together when their meaning or likely evolution differs. Small duplication can be clearer than a premature shared abstraction.
 - Premature optimisation: require an actual workload, constraint or credible cost argument. Do not introduce complexity to address a hypothetical bottleneck.
 - Poor readability: assess whether a colleague can follow the behaviour and decisions without reconstructing intent from incidental details.
-- Heavily nested expressions and ternaries: prefer clearly named intermediate variables that expose the meaning of conditions and computed values. Flag compact expressions that make the reader mentally unpack several decisions; recommend a readable sequence rather than nesting more logic into one line.
+- Long chains of conditions, heavily nested expressions and ternaries: prefer clearly named intermediate variables, clear conditionals and guard clauses that expose each decision. Preserve short-circuit dependencies when splitting checks into steps.
+- Complex expression-bodied methods and arrow functions: prefer block bodies with explicit statements, or named methods for multi-step logic and branching. Simple single-expression members can remain concise; see [TDD's .NET conventions](../tdd/SKILL.md#prefer-explicit-control-flow-and-method-bodies).
 - Nested calls in production and test code, including Arrange steps and helpers: assign awaited results, constructed objects and request bodies to role-named variables before using them. Flag calls chained onto parenthesised `await` expressions and arguments constructed inside another call. Follow existing naming and separate steps in longer sequences with blank lines; see [TDD's .NET conventions](../tdd/SKILL.md#name-intermediate-values-instead-of-nesting-calls).
 - Oversized changesets: identify unrelated concerns or independently reviewable slices that would make the change easier to assess and integrate.
 
@@ -54,6 +55,8 @@ Inspect for exposed tokens, credentials and secrets, and for relevant authentica
 ### Back end and domain
 
 Apply the user's DDD conventions even when the code currently works: business rules belong in Domain, aggregate roots protect invariants, and project dependencies point inward. Confirmed aggregate boundaries should not be bypassed by controller, handler or persistence code.
+
+For .NET nullable properties, parameters and return types, check that absence has a valid domain or contract meaning. Flag nullable additions used only to avoid updating constructors, callers or existing data; apply [DDD's non-nullable conventions](../ddd/SKILL.md#prefer-non-nullable-types), including focused larger refactors for required values.
 
 Consult the `ddd` and `tdd` skills when available for the full conventions. Their repository sources are [../ddd/SKILL.md](../ddd/SKILL.md) and [../tdd/SKILL.md](../tdd/SKILL.md); installed agents may need those skills installed separately. Review the code's evidence against the conventions without claiming that commit contents prove the historical red-green sequence.
 

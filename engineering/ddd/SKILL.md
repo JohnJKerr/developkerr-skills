@@ -50,9 +50,11 @@ Decide dispatch timing, persistence ordering and failure handling for the actual
 
 ## Preferred .NET/MongoDB conventions
 
-### Justify nullable properties
+### Prefer non-nullable types
 
-Prefer non-nullable properties. Justify each nullable property by explaining what absence means in the domain or contract and when it is valid. Construction or deserialisation convenience alone is insufficient justification.
+Prefer non-nullable properties, parameters and return types in .NET code. Justify each nullable type by explaining what absence means in the domain or contract and when it is valid. Construction or deserialisation convenience alone is insufficient justification.
+
+When adding a required parameter or property, update constructors, callers, mappings, fixtures and affected persisted data as needed to supply a valid value, even when that requires a larger refactor. Do not make the value nullable merely to preserve existing call sites or minimise the diff. Keep the refactor focused on the new requirement and account for compatibility and existing data. Preserve genuine optionality; do not replace meaningful absence with invented defaults, sentinel values or null-forgiving operators.
 
 ### Dependency direction and ownership
 
