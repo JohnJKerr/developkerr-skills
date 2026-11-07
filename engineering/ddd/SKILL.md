@@ -36,6 +36,16 @@ An aggregate root owns a consistency boundary and enforces its invariants throug
 
 Keep aggregates focused on the invariants they actually own. Do not make an aggregate large merely because objects are related in storage.
 
+### Make modules deep
+
+Give each module a simple interface that hides substantial behaviour. A module earns its place when deleting it would push its complexity back onto its callers. If deleting it would lose nothing, merge it into its caller or owner rather than keeping a pass-through layer.
+
+- Put each concept in the one module that owns it. Pull its special cases, ordering rules, validation and derived values inside so callers never need to know them.
+- Shrink the interface until there is one obvious way to call it. Remove any parameter, flag or option that the module can work out itself, that every caller passes the same way, or that nobody reads.
+- When the interface changes, move every caller to the new shape and delete the old path completely. Do not leave overloads, optional legacy parameters or compatibility shims behind for internal callers.
+
+Discuss the change with the user before removing a path that external consumers or persisted data depend on, such as a published HTTP contract or stored document shape.
+
 ### Coordinate multiple aggregates
 
 Use a domain service when multiple aggregates need to be updated in one unit of work. It owns the business coordination, works through domain behaviour, and preserves each root's invariants. Do not use it as a collection of rules that naturally belong on a root.
@@ -85,6 +95,6 @@ These exceptions do not permit database access inside Domain or public mutation 
 
 Apply the repository's TDD conventions to back-end behaviour: agree the public test seams before writing tests, then use strict red-green-refactor. The aggregate sketch and test seams answer different questions; they can be confirmed together when useful. Consult the `tdd` skill when available. Its repository source is [../tdd/SKILL.md](../tdd/SKILL.md); installed agents may need that skill installed separately.
 
-Review the result against the agreed sketch: business rules remain in Domain, roots protect their invariants, dependencies point inward, and persistence does not bypass the model. Check any concrete cross-aggregate consistency requirement through the relevant behaviour and integration coverage. Use proportionate review rather than imposing an unrelated checklist on every change.
+Review the result against the agreed sketch: business rules remain in Domain, roots protect their invariants, modules hide their rules behind narrow interfaces with no lingering old paths, dependencies point inward, and persistence does not bypass the model. Check any concrete cross-aggregate consistency requirement through the relevant behaviour and integration coverage. Use proportionate review rather than imposing an unrelated checklist on every change.
 
 Finish with a concise explanation of the model decisions, behaviour changed and checks actually performed. Highlight material unresolved domain questions or consistency limitations.
