@@ -74,6 +74,14 @@ Repository and external-service interfaces belong in Domain by default. An inter
 
 Start with a simple application structure. Controllers can initially coordinate domain calls and persistence. Introduce MediatR and a CQRS application layer when refactoring warrants them, rather than scaffolding handlers and dispatch infrastructure for every new project. Moving orchestration should not move business rules out of Domain.
 
+### Inject dependencies; do not locate them
+
+In ASP.NET projects, supply each class's dependencies through its constructor and register them with the built-in container in the composition root (`Program.cs` or registration extension methods). Depend on the interface the class actually uses so its dependencies stay visible and fakes can be substituted in tests.
+
+Do not use service location: no `IServiceProvider`, `GetService`/`GetRequiredService` or `HttpContext.RequestServices` calls inside controllers, handlers, domain services, repositories or adapters, and no static or ambient service accessors. Domain types must not reach for services at all; pass what a domain operation needs as an argument or through its owning service.
+
+Resolving from the container is limited to composition: registration factory delegates, and boundaries that must create their own scope, such as a hosted service using `IServiceScopeFactory` per unit of work. There, resolve one entry-point service from the scope and let constructor injection supply everything beneath it.
+
 ### Report expected rule failures
 
 Use FluentResults for expected business-rule failures so the rest of the platform can identify why an operation failed. Follow the project's established result and error conventions. Do not reduce distinct business failures to an unexplained boolean or invent a large error taxonomy without need.

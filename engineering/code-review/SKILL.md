@@ -62,6 +62,8 @@ Apply the user's DDD conventions even when the code currently works: business ru
 
 For .NET nullable properties, parameters and return types, check that absence has a valid domain or contract meaning. Flag nullable additions used only to avoid updating constructors, callers or existing data; apply [DDD's non-nullable conventions](../ddd/SKILL.md#prefer-non-nullable-types), including focused larger refactors for required values.
 
+In ASP.NET code, flag service location: `IServiceProvider`, `GetService`/`GetRequiredService`, `HttpContext.RequestServices` or static service accessors used outside composition. Recommend constructor injection; apply [DDD's dependency injection conventions](../ddd/SKILL.md#inject-dependencies-do-not-locate-them), including the narrow exception for scope-creating boundaries such as hosted services.
+
 Consult the `ddd` and `tdd` skills when available for the full conventions. Their repository sources are [../ddd/SKILL.md](../ddd/SKILL.md) and [../tdd/SKILL.md](../tdd/SKILL.md); installed agents may need those skills installed separately. Review the code's evidence against the conventions without claiming that commit contents prove the historical red-green sequence.
 
 Check tests for:
