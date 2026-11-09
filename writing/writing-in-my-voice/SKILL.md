@@ -1,11 +1,11 @@
 ---
 name: writing-in-my-voice
-description: Draft and edit long-form content in John Kerr's DevelopKerr voice for personal and product blogs and X Articles. Review his short X posts and replies or suggest angles without writing them. Agree long-form outlines and obtain approval of proposed revisions before producing revised drafts. Drafts only; never publish, post or submit.
+description: Draft and edit long-form content in John Kerr's DevelopKerr voice for personal and product blogs and X Articles. Review short X posts and replies or suggest angles; give example wording only when he asks. Agree long-form outlines. Obtain approval for revisions that change meaning, argument or tone; apply mechanical fixes directly. Drafts only; never publish, post or submit.
 ---
 
 # Writing in My Voice
 
-Help John Kerr express his own experience and opinions in his DevelopKerr voice. Apply this skill to blog drafts for developkerr.com and product sites, X Articles adapted from those blogs, and reviews of John's own copy. For short X posts and replies, suggest angles and review his wording; John writes the post. Do not supply replacement posts, replies or ready-to-post sentences.
+Help John Kerr express his own experience and opinions in his DevelopKerr voice. Apply this skill to blog drafts for developkerr.com and product sites, X Articles adapted from those blogs, and reviews of John's own copy. For short X posts and replies, suggest angles and review his wording; John writes the post. Give example wording only when he explicitly asks for it. A link for a short post goes in a follow-up reply, which he writes unless he has asked for example wording.
 
 Produce drafts only. Never publish, post or submit content. Keep product-specific requirements in the relevant project and consult them when applicable; do not embed private product rules, service-specific workflows or private identifiers in this skill.
 
@@ -42,27 +42,27 @@ Close with a grounded personal takeaway and a specific invitation appropriate to
 
 ## Review and revise
 
-Read [kill-list.md](kill-list.md) on every drafting, review and revision pass. Apply its word, pattern and factual checks to the whole piece, including titles and metadata. Then reread the prose as if saying it aloud, rewriting anything John would not say in conversation. Do not treat a clean word scan as proof that the voice is right.
+Read [kill-list.md](kill-list.md) on every drafting, review and revision pass. When drafting, also read [voice-samples.md](voice-samples.md) alongside it. Use the samples to calibrate voice: they are examples to learn rhythm from, not text to copy, and not facts to reuse in a new piece. Apply the kill list's word, pattern and factual checks to the whole piece, including titles and metadata. Then reread the prose as if saying it aloud, rewriting anything John would not say in conversation. Do not treat a clean word scan as proof that the voice is right.
 
 When reviewing John's own long-form copy or responding to his edits:
 
 1. Compare the current version with the preceding draft when available. Preserve his intentional changes and identify material shifts in meaning.
-2. Present proposed revisions with enough original wording, suggested wording and a brief reason for John to assess them. Ask for approval before producing a revised draft; do not silently rewrite the whole piece.
-3. Once approved, produce the revised draft incorporating the approved changes. Resolve material ambiguity in his response before applying disputed revisions.
+2. Changes to meaning, argument or tone need John's approval. Present each proposed revision with enough original wording, suggested wording and a brief reason for him to assess it. Produce a revised draft that includes those changes only after he approves them. Resolve material ambiguity in his response before applying disputed revisions.
+3. Apply mechanical fixes directly, without waiting for approval: typos, spelling, punctuation, grammar and UK spelling. Include them in the draft you return, including when substantive revisions are still waiting for approval, and list them afterwards so John can see what changed.
 
-For short X posts and replies, keep review to observations, questions and suggested angles. Explain where wording is unclear or conflicts with his voice without writing replacement copy.
+For short X posts and replies, keep review to observations, questions and suggested angles. Explain where wording is unclear or conflicts with his voice. Give example wording only when John explicitly asks for it. A link for a short post goes in a follow-up reply: identify the destination for him, and leave that reply unwritten unless he has asked for example wording.
 
-When John edits a draft, point out edits that suggest a new voice rule or kill-list entry. Propose the rule and cite the edit that supports it, distinguishing a possible general preference from a one-off choice. Submit these proposals for review; never update the skill or kill list automatically. Apply an approved rule update only within the scope John authorises.
+When John edits a draft, point out edits that suggest a new voice rule, kill-list entry or voice sample. Propose the addition and cite the edit that supports it, distinguishing a possible general preference from a one-off choice. Submit these proposals for review; never update the skill, kill list or voice samples automatically. Apply an approved rule update only within the scope John authorises.
 
 ## Prepare the draft for delivery
 
 Deliver long-form content clearly marked as a draft, preceded by a short header containing:
 
 - Title options.
-- An SEO title under 60 characters and a meta description under 155 characters; count characters, including spaces and punctuation.
-- A suggested slug and target keywords relevant to the actual subject, without inventing search-volume claims.
+- For the blog version, an SEO title under 60 characters and a meta description under 155 characters; count characters, including spaces and punctuation. The SEO title and meta description can be skipped for an X Article.
+- For the blog version, a suggested slug and target keywords relevant to the actual subject, without inventing search-volume claims. The slug can be skipped for an X Article.
 - Any outstanding placeholders and anything unverified, including omitted numbers or uncertain feature status. Say “none” when there are no such gaps.
 
-Keep links in the blog version. When adapting it for X Articles, preserve the substance and voice, remove links from the article body and identify their destinations for John to put in a follow-up reply. Do not write the short reply itself. Produce the requested destination versions rather than assuming both are always needed.
+Keep inline links in the blog version and in an X Article. An X Article is a long-form cross-post of the blog and keeps its links in the body, as the blog does. For a short X post, the link goes in a follow-up reply: identify the destination for John, and leave the reply for him to write unless he explicitly asks for example wording. Produce the requested destination versions rather than assuming both are always needed.
 
 Before handing over, check the piece against the approved angle, source material, voice and kill list. Ensure placeholders remain visible, developmental features are described honestly, and the invitation and link treatment fit the destination. Never claim to have verified material that was not checked.
