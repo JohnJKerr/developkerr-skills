@@ -69,7 +69,7 @@ Consult the `ddd` and `tdd` skills when available for the full conventions. Thei
 Check tests for:
 
 - Exactly one act and one assertion per test, with Arrange/Act/Assert comments where appropriate. Helpers should not conceal multiple assertions to evade the rule.
-- Scenario-based suites and outcome-based names.
+- Scenario-based suites and outcome-based names. Flag new suites added where an existing suite already covers the behaviour and its setup would have accommodated the test.
 - Observable behaviour exercised through appropriate public seams, with shared setup expressed clearly through builders when useful.
 - Meaningful fakes in preference to mocks. Flag tests that mock away the logic they purport to test or merely verify internal call choreography.
 - Coverage of the actual behaviour and risks. A passing HTTP smoke test does not establish domain correctness, and fake-backed tests do not establish MongoDB integration correctness.

@@ -17,7 +17,7 @@ State a concrete hypothesis and choose a test or story that can distinguish it f
 
 ### Back end
 
-Follow the established TDD conventions. Agree the public test seam with the user before writing the behaviour test, reusing explicit agreement already provided for the current change. Write and run a test that attempts to reproduce the reported issue and fails for the intended reason.
+Follow the established TDD conventions. Agree the public test seam with the user before writing the behaviour test, reusing explicit agreement already provided for the current change. Write and run a test that attempts to reproduce the reported issue and fails for the intended reason. Add it to the existing suite for the affected behaviour; a bug is not a new behaviour, so create a new suite only when that suite's setup completely rules it out.
 
 Use one act and exactly one assertion per test, with Arrange/Act/Assert comments where appropriate. Prefer meaningful fakes and observable outcomes over tests coupled to internal implementation. Compilation or environment failures do not establish reproduction of the bug.
 

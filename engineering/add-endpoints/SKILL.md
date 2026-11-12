@@ -51,7 +51,7 @@ Do not duplicate the controller hand-off assertion here or mock away the handler
 
 ## Test discipline and authentication
 
-Apply strict red-green-refactor at each stage. Every test has one act and exactly one assertion, with `// Arrange`, `// Act` and `// Assert` where appropriate. Use scenario-based suites, outcome-based names and builders for useful shared setup. Compilation failure alone is not a behavioural red; minimal declarations or stubs may be added to reach an executable failing test. Never claim an unrun red or green. Resolve execution blockers before proceeding with implementation.
+Apply strict red-green-refactor at each stage. Every test has one act and exactly one assertion, with `// Arrange`, `// Act` and `// Assert` where appropriate. Use scenario-based suites, appending to an existing suite unless its setup completely rules it out or the behaviour is new, with outcome-based names and builders for useful shared setup. Compilation failure alone is not a behavioural red; minimal declarations or stubs may be added to reach an executable failing test. Never claim an unrun red or green. Resolve execution blockers before proceeding with implementation.
 
 Follow the project's OAuth provider and policies. Use its integration-test authentication setup. Prefer exercising real authentication through an available M2M token when that is the project's approach. Do not expose tokens in output or commit them to the repository.
 
