@@ -76,6 +76,12 @@ Check tests for:
 
 Treat maintainability and convention findings as actionable even when tests pass. Do not impose new behaviour tests on a pure refactor or configuration change already adequately covered by existing tests.
 
+### MongoDB queries and aggregations
+
+When reviewing MongoDB persistence code, pay particular attention to query and aggregation performance. Scrutinise every use of `$expr`: question whether ordinary query predicates could express the same condition with better index use. Treat `$expr` as a potential performance concern, and assess the actual expression, available indexes and query plan before claiming it causes a scan or cannot use an index.
+
+Prioritise passing minimal data through aggregation pipelines: filter documents early and project away unneeded fields as early as practical, especially before costly joins, unwinds, sorts or groups. Preserve fields needed by later stages and place index-eligible filtering and sorting before projections or transformations that would prevent index use. Account for MongoDB's pipeline optimisations; use `explain` and representative data when practical to verify index use and the volume of documents processed rather than judging performance from stage order alone.
+
 ### Front end
 
 Look for unnecessary prop drilling, unclear component responsibilities, questionable effects and other concrete React smells. Components should own their React Query data retrieval and mutations rather than pass server state and operations through chains of intermediaries.
