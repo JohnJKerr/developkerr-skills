@@ -23,6 +23,7 @@ A fresh collection of portable skills for agents, authored in this repository. E
 | [writing-in-my-voice](writing/writing-in-my-voice/SKILL.md) | Writing | Draft blogs and X Articles in John Kerr's voice; obtain approval for changes to meaning, argument or tone, and review short X wording unless he asks for an example. | "Use writing-in-my-voice to agree an outline and draft a blog from these notes." |
 | [self-host](engineering/self-host/SKILL.md) | Engineering | Prepare repository files for Coolify with Docker packaging, external-service configuration, secret-leakage checks and concise setup notes; no deployment. | "Use self-host to prepare this API for Coolify with MongoDB hosted separately." |
 | [delivery](engineering/delivery/SKILL.md) | Engineering | Deliver small, tested, shippable changesets; separate prerequisite concerns and hand back for agreement when scope expands. | "Use delivery to break this feature into shippable slices and stop after the first." |
+| [where-were-we](engineering/where-were-we/SKILL.md) | Engineering | Recap a thread on return: state verified against the repo and PR, decisions made, decisions awaiting you (blockers first) and remaining steps; then wait. | "Use where-were-we to catch me up on this licence allocation thread." |
 
 ## Roadmap
 
