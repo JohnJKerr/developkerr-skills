@@ -11,7 +11,7 @@ Write a persistent explanation that lets a user or agent understand the concept 
 
 Use the request and available context to identify the concept, intended audience and questions the document needs to answer. Ask only when a material ambiguity cannot be resolved from that context.
 
-Default to Markdown in the target project's `/docs` folder, relative to its repository root. Respect an explicitly requested destination. Look for existing relevant documents before creating one; update the appropriate document rather than duplicating the explanation. Preserve unrelated content and useful links.
+Default to Markdown in the target project's `/docs` folder, relative to its repository root. Respect an explicitly requested destination. Architecture decision records created by [`remove-comments`](../../engineering/remove-comments/SKILL.md) also belong in the docs folder, under its ADR convention. Look for existing relevant documents before creating one; update the appropriate document rather than duplicating the explanation. Preserve unrelated content and useful links.
 
 ## Ground the explanation
 
