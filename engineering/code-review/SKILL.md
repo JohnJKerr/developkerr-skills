@@ -24,7 +24,7 @@ Review and report. Do not edit the code, add dependencies or publish feedback un
 Examine the following in context:
 
 - Nested loops: assess readability, input sizes and computational cost. Explain the concrete problem instead of mechanically demanding a different syntax.
-- Comments compensating for unclear code: prefer domain names, clear control flow and small understandable operations. Preserve comments that explain a useful reason or constraint.
+- Comments: flag new or changed comments. Tautologies and stale comments should be deleted. Excuses for hacky code point to an implementation to fix, not to explain. Important decisions belong in an ADR. Prefer domain names, clear control flow and small understandable operations. Arrange/Act/Assert markers, tooling directives, licence headers and public API doc comments on published libraries are exempt. For a codebase with many comments, recommend the [`remove-comments`](../remove-comments/SKILL.md) skill.
 - Hasty abstractions: question interfaces, base classes, generic helpers and frameworks without a demonstrated need.
 - Shallow modules: question classes, services and helpers whose interface is about as complex as what they hide. If deleting one would lose nothing, recommend merging it away; if deleting it would push complexity onto its callers, it is earning its place.
 - Leaked concepts: flag callers that must know a module's special cases, ordering rules, validation or derived values. Recommend moving that knowledge into the one module that owns the concept.
