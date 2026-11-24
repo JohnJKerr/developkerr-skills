@@ -35,6 +35,8 @@ Cover the following information, adapting the layout and combining related point
 - **Task criteria:** Include a checklist against the agreed criteria. Check only items supported by the work and evidence. Leave incomplete or unverified items unchecked and explain the gap. If no criteria were agreed, state that rather than manufacturing a checklist.
 - **Validation:** Briefly summarise checks actually performed, their results and material limitations. Distinguish automated evidence from manual review or assumptions.
 
+**At a glance:** Use Illustrate on the changes and put its sketch in an `## At a glance` section at the top of the description, so reviewers see the shape and data flow of the change before the text. Skip it for trivial PRs with no meaningful structure or flow to show, such as a typo fix, a docs-only edit or a dependency bump, and say in your report that you skipped it. Illustrate's repository source is [../illustrate/SKILL.md](../illustrate/SKILL.md). Installed agents may need it installed separately. If it is unavailable, draw a comparable sketch by following the same approach.
+
 Follow a repository template when present while retaining this information. A small PR may cover most of it in a few sentences plus the criteria checklist; a complex change may need short sections. Prefer specific, useful detail over boilerplate.
 
 Write for someone who has not seen the chat. Omit conversational history, a chronological work diary and abandoned approaches unless they explain a material tradeoff. When scope changes, update the title and description to match the final implementation. A title should name the concrete change and follow the repository's convention.
@@ -43,7 +45,7 @@ Write for someone who has not seen the chat. Omit conversational history, a chro
 
 Prefer small commits that can each be reviewed on their own merits. When preparing commits within the authorised task, group related changes coherently and keep unrelated work out. Do not rewrite shared history merely to make the PR look tidier.
 
-Before finalising the description, compare it with the diff: are the decisions, departures, abstractions and claimed outcomes accurate? Consider likely reviewer questions and answer the pertinent ones concisely. The Code Review skill may inform a readiness check when available, but it is not a required dependency.
+Before finalising the description, compare it with the diff: are the decisions, departures, abstractions, claimed outcomes and the at-a-glance sketch accurate? Consider likely reviewer questions and answer the pertinent ones concisely. The Code Review skill may inform a readiness check when available, but it is not a required dependency.
 
 If creating or updating the PR is authorised, use the available repository integration and verify the resulting PR identity. Otherwise provide the prepared title and description. Report the PR link when one was created or updated, or clearly identify the output as a draft description.
 
